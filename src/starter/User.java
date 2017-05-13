@@ -16,10 +16,10 @@ public class User {
     }
 
     /**
-     * @param myTask: task to be added to aTaskList
+     * @param aTask: task to be added to aTaskList
      */
-    public void addTaskToList (Task myTask) {
-        aTaskList.add(myTask);
+    public void addTaskToList (Task aTask) {
+        aTaskList.add(aTask);
     }
 
     /**
