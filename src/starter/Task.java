@@ -26,7 +26,9 @@ public class Task {
      */
 
     public void addNote(String myNote) {
-	    aNotes += myNote;
+        int noteNumber = 0;
+        aNotes = aNotes + "Note " + noteNumber + ": " + myNote;
+        noteNumber++;
     }
 
     /**
