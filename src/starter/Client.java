@@ -1,4 +1,4 @@
-package starter;
+\package starter;
 
 public class Client {
 	
