@@ -15,7 +15,7 @@ public class Task {
 	}
 	
 	public void print() {
-		if(!aComplete) {
+		if(!complete) {
 			System.out.println("0: " + aName);
 		}
 		else {
@@ -23,10 +23,7 @@ public class Task {
 		}
 	}
 
-	public void complete() {
-		aComplete = true;
-		
-	}
+	
 	private boolean complete;
 
 
