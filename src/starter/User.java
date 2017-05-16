@@ -19,10 +19,12 @@ public class User {
 
     /**
      * Constructor for user
+     * @param currentUserID 
      * @param aName: name of the user
      */
-    public User (String aName) {
+    public User (String aName, int aID) {
         this.name = aName;
+        this.userID = aID;
     }
 
     /**

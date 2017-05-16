@@ -6,13 +6,16 @@ public class Client {
 		
 		Team boathouse = new Team("The BoatHouse");
 		
-		User isaiah = new User("Isaiah");
-		User amanda = new User("Amanda");
-		User andries = new User("Andries");
+		boathouse.addUser("Amanda");
+		boathouse.addUser("Andries");
+		boathouse.addUser("Isaiah");
 		
-		boathouse.addUser(isaiah);
-		boathouse.addUser(amanda);
-		boathouse.addUser(andries);
+		boathouse.addTask("Wash Dishes");
+		boathouse.addTask("Sjoes");
+		
+		TaskManager.getInstance().randomTaskAssignment(boathouse);
+		boathouse.printTaskUserMap();
+		
 		
 	}
 

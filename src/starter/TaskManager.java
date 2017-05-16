@@ -1,16 +1,16 @@
 package starter;
-import java.util.Map;
-import java.util.ArrayList;
+import java.util.HashMap;
+
 
 /**
  * Created by amandaivey on 5/16/17.
  */
-public class TaskManager {
+class TaskManager {
 
-    private static TaskManager firstInstance = null;
+    private static TaskManager firstInstance = new TaskManager();
 
     //private constructor to construct a single instance of itself
-    private TaskManager() {}
+    private TaskManager() { }
 
     public static TaskManager getInstance() {
 
@@ -20,20 +20,22 @@ public class TaskManager {
         return firstInstance;
     }
 
-    private Map<Task, User> taskUserMap;
+    private HashMap<Task, User> taskUserMap = new HashMap<Task,User>();
 
-    public Map<Task, User> getTaskUserMap() {
+    public HashMap<Task, User> getTaskUserMap() {
         return taskUserMap;
     }
 
     /**
-     * random task assignment takes a user list and a task list and randomly assigns tasks to users
+     * random task assignment takes a user list and a task list and randomly assigns all tasks to users
      * ultimately populating the taskUserMap
      * @param aUserList: user list
      * @param aTaskList: task list
      */
-    public void randomTaskAssignment(ArrayList<User> aUserList, ArrayList<Task> aTaskList){
-        //todo: design algorithm that populates the task user map
+    public void randomTaskAssignment(Team aTeam){
+    	for (Task t: aTeam.getTaskList()) {
+    		assignTaskToUser(aTeam.getUserList().get((int) (Math.random()*aTeam.getUserList().size())), t);
+    	}
     }
 
     /**
