@@ -1,7 +1,6 @@
 package starter;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -16,11 +15,13 @@ public class Team {
 	private int currentTaskID = 1;
 	
 	public void printTaskUserMap() {
+		System.out.println("------------------");
 		Iterator<Entry<Task, User>> it = TaskManager.getInstance().getTaskUserMap().entrySet().iterator();
 		while (it.hasNext()) {
 			Map.Entry<Task, User> pair = (Map.Entry<Task,User>)it.next();
 			System.out.println(pair.getKey().getName() + "->" + pair.getValue().getName());
 		}
+		System.out.println("------------------");
 	}
 	
 	public String getName() {

@@ -1,4 +1,7 @@
 package starter;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 
 
@@ -31,10 +34,8 @@ class TaskManager {
      * ultimately populating the taskUserMap
      * @param aTeam: team
      */
-    public void randomTaskAssignment(Team aTeam){
-    	for (Task t: aTeam.getTaskList()) {
-    		assignTaskToUser(aTeam.getUserList().get((int) (Math.random()*aTeam.getUserList().size())), t);
-    	}
+    public void taskAssignment(TaskAssigner ta, Team pTeam){
+    	ta.assignTasksToUsers(pTeam);
     }
 
     /**
@@ -43,7 +44,7 @@ class TaskManager {
      * @param aTask: task
      */
 
-    private void assignTaskToUser(User aUser, Task aTask) {
+    public void assignTaskToUser(User aUser, Task aTask) {
         taskUserMap.put(aTask, aUser);
     }
 }
