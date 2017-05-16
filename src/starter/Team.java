@@ -20,8 +20,18 @@ public class Team {
 	}
 	
 	public void getTaskList() {
+		System.out.println("-------------");
 		for(User u: aUsers) {
-			u.getTasks();
+			if(!u.noTasks()) {
+				u.getTasks();
+			}
+		}
+		System.out.println("-------------");
+	}
+	
+	public void clearCompleteTasks(){
+		for (User u: aUsers) {
+			u.clearCompleteTask();
 		}
 	}
 

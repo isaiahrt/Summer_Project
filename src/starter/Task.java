@@ -16,10 +16,10 @@ public class Task {
 	
 	public void print() {
 		if(!complete) {
-			System.out.println("0: " + aName);
+			System.out.println("Incomplete: " + aName);
 		}
 		else {
-			System.out.println("X: " + aName);
+			System.out.println("Complete: " + aName);
 		}
 	}
 
@@ -56,4 +56,9 @@ public class Task {
     public void setComplete() {
         complete = true;
     }
+    
+    public boolean isComplete() {
+    	return complete;
+    }
+    
 }

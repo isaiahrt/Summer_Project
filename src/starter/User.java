@@ -7,6 +7,11 @@ public class User {
 	private String aName;
 	private ArrayList<Task> aTasks = new ArrayList<Task>();
 	
+	public boolean noTasks() {
+		return aTasks.isEmpty();
+		
+	}
+	
 	public void getTasks() {
 		System.out.println(aName + ":");
 		for (Task t: aTasks) {
@@ -50,4 +55,13 @@ public class User {
     public void completeTask(Task aTask) {
         aTask.setComplete();
     }
+
+	public void clearCompleteTask() {
+		for (Task t: aTasks) {
+			if (t.isComplete()) {
+				aTasks.remove(t);
+			}
+		}
+		
+	}
 }
