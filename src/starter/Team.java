@@ -19,8 +19,7 @@ public class Team {
 
 	/**
 	 * constructor for team
-	 * @param aName: team name
-	 * @param aUsers: array list of users that make up the team
+	 * @param pName: team name
 	 */
 	public Team(String pName) {
 		this.name = pName;

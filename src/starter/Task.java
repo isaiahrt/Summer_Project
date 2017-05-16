@@ -8,8 +8,8 @@ public class Task {
 	
 	 /**
      * constructor for Task
-     * @param aName: task name
-     * @param dueDate: date the task needs to be completed by
+     * @param pName: task name
+     * @param pID: taskID
      */ 
 	public Task(String pName, int pID) {
 		name = pName;
