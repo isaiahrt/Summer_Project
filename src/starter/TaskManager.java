@@ -29,8 +29,7 @@ class TaskManager {
     /**
      * random task assignment takes a user list and a task list and randomly assigns all tasks to users
      * ultimately populating the taskUserMap
-     * @param aUserList: user list
-     * @param aTaskList: task list
+     * @param aTeam: team
      */
     public void randomTaskAssignment(Team aTeam){
     	for (Task t: aTeam.getTaskList()) {

@@ -4,6 +4,7 @@ public class User {
 	
 	private String name;
 	private int userID;
+	private int reliability;
 	
 	public String getName() {
 		return name;
@@ -19,8 +20,8 @@ public class User {
 
     /**
      * Constructor for user
-     * @param currentUserID 
      * @param aName: name of the user
+	 * @param aID: user ID
      */
     public User (String aName, int aID) {
         this.name = aName;
@@ -33,5 +34,9 @@ public class User {
      */
     public void completeTask(Task aTask) {
     	aTask.setToComplete();
+    }
+
+    public void setReliability(){
+        reliability = 1;
     }
 }

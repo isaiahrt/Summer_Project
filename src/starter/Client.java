@@ -11,7 +11,7 @@ public class Client {
 		boathouse.addUser("Isaiah");
 		
 		boathouse.addTask("Wash Dishes");
-		boathouse.addTask("Sjoes");
+		boathouse.addTask("Shoes");
 		
 		TaskManager.getInstance().randomTaskAssignment(boathouse);
 		boathouse.printTaskUserMap();

@@ -5,6 +5,7 @@ public class Task {
 	private String name;
 	private int taskID;
 	private boolean complete = false;
+	private int desirability;
 	
 	 /**
      * constructor for Task
@@ -34,7 +35,10 @@ public class Task {
     public int getID() {
     	return taskID;
     }
-    
+
+    public void setDesirability(){
+    	desirability = 1;
+	}
     
     
 }
