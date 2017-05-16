@@ -32,7 +32,7 @@ class TaskManager {
     /**
      * random task assignment takes a user list and a task list and randomly assigns all tasks to users
      * ultimately populating the taskUserMap
-     * @param aTeam: team
+     * @param pTeam: team
      */
     public void taskAssignment(TaskAssigner ta, Team pTeam){
     	ta.assignTasksToUsers(pTeam);
@@ -45,6 +45,13 @@ class TaskManager {
      */
 
     public void assignTaskToUser(User aUser, Task aTask) {
-        taskUserMap.put(aTask, aUser);
+        if(taskUserMap.get(aTask) == null){
+            taskUserMap.put(aTask, aUser);
+        }
+        else {
+            //find aTask entry, delete the user and assign new user
+            taskUserMap.remove(aTask);
+            taskUserMap.put(aTask, aUser);
+        }
     }
 }
